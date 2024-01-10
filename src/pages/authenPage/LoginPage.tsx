@@ -1,4 +1,3 @@
-import React from 'react'
 import './authenPage.scss'
 
 export default function LoginPage() {
