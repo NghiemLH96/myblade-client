@@ -1,0 +1,20 @@
+.authenPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+    .contentBox{
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FFFCF7;
+        padding: 30px;
+        .infoBox{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

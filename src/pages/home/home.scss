@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&display=swap');
+$themeFont:"Arsenal";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:$themeFont ;
+}
+
+.pageHeader{
+    display: flex;
+    height: 80px;
+    background-color: #F6F1EB;
+    justify-content: space-between;
+    .header-L{
+        display: flex;
+        align-items: center;
+        width: 25%;
+        .logo{
+
+            width: 60%;
+            height: 60%;
+            object-fit: cover;
+            margin:0px 50px
+        }
+    }
+    .header-M{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 25px;
+            &:hover{
+                border-bottom: 3px solid;
+            }
+
+        }
+    }.header-R{
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cartBox{
+            display: flex;
+            justify-content: center;
+            width: 30%;
+            .cartIcon{
+                font-size: 27px;
+                border-radius: 50%;
+                border: 1px solid black;
+                padding: 10px;
+                cursor: pointer;
+                transition: all 1s;
+                &:hover{
+                    background-color: rgb(252, 217, 160);
+                }
+            }
+        }
+        .accountBox{
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            
+            button{
+                padding: 10px;
+                border: 1px solid black;
+                background-color: transparent;
+                border-radius: 10px;
+                width: 150px;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 1s;
+                &:hover{
+                    background-color: rgb(252, 217, 160);
+                }
+            }
+        }
+    }
+}
