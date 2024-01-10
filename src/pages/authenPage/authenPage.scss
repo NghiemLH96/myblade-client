@@ -5,16 +5,44 @@
     width: 100%;
     padding: 50px;
     .contentBox{
-        width: 450px;
+        width: 550px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         background-color: #FFFCF7;
         padding: 30px;
+        h2{
+            font-size: 35px;
+        }
         .infoBox{
             display: flex;
             flex-direction: column;
+            row-gap: 20px;
+            padding: 20px 0px;
+            font-size: 18px;
+            .info-field{
+                label{
+                    display: inline-block;
+                    min-width: 160px;
+                }
+                input{
+                    min-width: 250px;
+                }
+            }
+            .button-field{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+                button{
+                    padding: 5px 10px;
+                    font-size: 15px;
+                    cursor: pointer;
+                    background-color: #444444;
+                    color: #FFFFFF;
+                }
+            }
         }
     }
 }
