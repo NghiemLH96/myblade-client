@@ -1,85 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&display=swap');
-$themeFont:"Arsenal";
-*{
+$themeFont: "Arsenal";
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:$themeFont ;
+    font-family: $themeFont ;
 }
 
-.pageHeader{
+.pageHeader {
     display: flex;
-    height: 80px;
-    background-color: #F6F1EB;
-    justify-content: space-between;
-    .header-L{
-        display: flex;
-        align-items: center;
-        width: 25%;
-        .logo{
+    flex-direction: column;
 
-            width: 60%;
-            height: 60%;
-            object-fit: cover;
-            margin:0px 50px
+    width: 100%;
+    height: 150px;
+    background-color: #F6F1EB;
+
+    .header_T {
+        display: flex;
+        height: 65px;
+        width: 100%;
+        justify-content: space-between;
+
+        .header-L {
+            display: flex;
+            align-items: center;
+            width: 25%;
+
+            .logo {
+
+                width: 60%;
+                height: 60%;
+                object-fit: cover;
+                margin: 0px 50px
+            }
+        }
+
+        .header-M {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 18px;
+
+                &:hover {
+                    border-bottom: 3px solid;
+                }
+
+            }
+        }
+
+        .header-R {
+            width: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .accountBox {
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+
+                .menuBox {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 80px;
+                    border: 1px solid black;
+                    width: 90px;
+                    cursor: pointer;
+
+                    .menuIcon {
+                        font-size: 18px;
+                        padding: 10px;
+                    }
+
+                    .userAvatar {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                    }
+                }
+
+                button {
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    width: 150px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: all 1s;
+
+                    &:hover {
+                        background-color: rgb(252, 217, 160);
+                    }
+                }
+            }
         }
     }
-    .header-M{
-        width: 40%;
+    .header-B{
         display: flex;
-        align-items: center;
-        column-gap: 30px;
-        a{
-            text-decoration: none;
-            color: black;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 700;
-            font-size: 25px;
-            &:hover{
-                border-bottom: 3px solid;
-            }
-
-        }
-    }.header-R{
-        width: 35%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .cartBox{
+        justify-content: center;
+        width: 100%;
+        height: 85px;
+        .searchField{
+            width: 60%;
+            height: 60px;
+            background-color: #FFFFFF;
+            border-radius: 80px;
             display: flex;
-            justify-content: center;
-            width: 30%;
-            .cartIcon{
-                font-size: 27px;
-                border-radius: 50%;
-                border: 1px solid black;
-                padding: 10px;
-                cursor: pointer;
-                transition: all 1s;
-                &:hover{
-                    background-color: rgb(252, 217, 160);
-                }
-            }
-        }
-        .accountBox{
-            width: 70%;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            column-gap: 20px;
-            
-            button{
-                padding: 10px;
-                border: 1px solid black;
-                background-color: transparent;
-                border-radius: 10px;
-                width: 150px;
-                font-size: 20px;
-                cursor: pointer;
-                transition: all 1s;
-                &:hover{
-                    background-color: rgb(252, 217, 160);
+            justify-content: space-between;
+            .inputField{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 2px;
+                padding: 30px;
+                font-size: 15px;
+                input{
+                    border-radius: 80px;
+                    height: 25px;
+                    outline: none;
+                    border: none;
                 }
+                &:hover{
+                    background-color: rgb(215, 215, 215);
+                    border-radius: 80px;
+                }
+            }
+            button{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                background-color: #F6F1EB;
+                border: none;
             }
         }
     }
