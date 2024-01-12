@@ -31,4 +31,4 @@ jobs:
           nvm use
           npm ci
           npm run build
-          curl -X POST -H "Content-Type: application/json" -H "Authorization:${{ secrets.DISCORD_AUTHORIZATION }} -d '{"content":"Dự án reactJs đã deploy thành công link: https://myblade.io.vn/ "}' 
+          curl -X POST -H "Content-Type: application/json" -H "Authorization:${{ secrets.DISCORD_AUTHORIZATION }} -d "{"content":"Dự án reactJs đã deploy thành công link: https://myblade.io.vn/ "}"
