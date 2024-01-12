@@ -45,7 +45,7 @@ export default function Header() {
             <label htmlFor="">Paxes</label>
             <input type="text" />
           </div>
-          <button>Searchese</button>
+          <button>Search</button>
         </div>
       </section>
     </div>
