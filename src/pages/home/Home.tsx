@@ -5,7 +5,15 @@ import './home.scss'
 
 export default function Home() {
   return (
-    <div>
+    <div onClick={()=>{
+      let searchNodeList = document.querySelectorAll(".inputField");
+      searchNodeList.forEach(element=>{
+        if (element.classList) {
+          element.classList.remove("active")
+          element.classList.remove("inactive")
+        }
+      })
+    }}>
         <Header/>
         <Outlet/>
         <Footer/>

@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/blade-high-resolution-logo-black-removebg-preview.png'
+import { DatePicker, Space } from 'antd'
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const { RangePicker } = DatePicker;
+  const [ searchActive , setSearchActive ] = useState("null")
+  useEffect(()=>{
+    document.querySelectorAll(`.inputField`)?.forEach((element)=>{element.classList.remove("active")})
+    document.querySelector(`.${searchActive ? searchActive : "null"}`)?.classList.add("active")
+  },[searchActive])
+
   return (
     <div className='pageHeader'>
       <section className='header_T'>
@@ -27,24 +36,22 @@ export default function Header() {
         </div>
       </section>
       <section className='header-B'>
-        <div className='searchField'>
-          <div className='inputField location'>
+        <div className={searchActive != "" ? "searchField active" : "seachField"}>
+          <div onClick={()=>{setSearchActive('location')}} className={searchActive == 'location' ? 'inputField location active' : 'inputField location'}>
             <label htmlFor="">Location</label>
-            <input type="text" />
+            <input placeholder='Enter Location' type="text" />
           </div>
-          <div className='inputField checkIn'>
-            <label htmlFor="">Check In</label>
-            <input type="text" />
+          <div onClick={()=>{setSearchActive('dateRange')}} className={searchActive == 'dateRange' ? 'inputField dateRange active' : 'inputField dateRange'}>
+            <Space style={{display:"flex",justifyContent:"center" , width:"100%"}} direction="vertical" size={1}>
+              <label htmlFor="">Date Range</label>
+              <RangePicker style={{padding:"0px"}} bordered={false}/>
+            </Space>
           </div>
-          <div className='inputField checkOut'>
-            <label htmlFor="">Check Out</label>
-            <input type="text" />
-          </div>
-          <div className='inputField Paxes'>
+          <div onClick={()=>{setSearchActive('paxes')}} className={searchActive == 'paxes' ? 'inputField paxes active' : 'inputField paxes'}>
             <label htmlFor="">Paxes</label>
-            <input type="text" />
+            <input placeholder='Enter pax' type="text" />
           </div>
-          <button>Searches</button>
+          <button>Search</button>
         </div>
       </section>
     </div>
